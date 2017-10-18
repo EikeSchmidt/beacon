@@ -1,0 +1,50 @@
+<h1>Synchronisation</h1>
+
+<div esBeaconContainer class="example-box">
+   <es-beacon *ngIf="active" [synchronisation]="synchronisation ? 1 : false" left="10px"></es-beacon>
+   <es-beacon *ngIf="active" [synchronisation]="synchronisation ? 1 : false" left="40px"></es-beacon>
+
+   <es-beacon *ngIf="active" [synchronisation]="synchronisation ? 2 : false" right="10px"></es-beacon>
+   <es-beacon *ngIf="active" [synchronisation]="synchronisation ? 2 : false" right="40px"></es-beacon>
+
+   <label>
+      <input type="checkbox" [(ngModel)]="synchronisation">
+      synchronisation
+   </label>
+   <br>
+   <br>
+   <button (click)="active = !active">toggle active</button>
+</div>
+
+
+<pre class="example-code">
+<![CDATA[
+<div esBeaconContainer>
+   <es-beacon *ngIf="active" [synchronisation]="synchronisation ? 1 : false" left="10px"></es-beacon>
+   <es-beacon *ngIf="active" [synchronisation]="synchronisation ? 1 : false" left="40px"></es-beacon>
+
+   <es-beacon *ngIf="active" [synchronisation]="synchronisation ? 2 : false" right="10px"></es-beacon>
+   <es-beacon *ngIf="active" [synchronisation]="synchronisation ? 2 : false" right="40px"></es-beacon>
+
+
+   <input type="checkbox" [(ngModel)]="synchronisation">
+   <button (click)="active = !active">toggle active</button>
+</div>
+]]>
+</pre>
+
+
+<p>
+   Since it looks awkward when all beacons created at the same time blink at the same time, every beacon starts delayed
+   by a random dozen of milliseconds.<br>
+   If you give beacons the same synchronisation-id (must be a small integer), they get the same delay and will blink
+   synchronously.
+</p>
+<p>
+   That effect only takes place if the beacon get created at the same time. That is why you have to recreate the beacon
+   in the example with *ngIf.
+</p>
+<p>
+   You can make all simultaneously created beacons synchronous with the beacon service by
+   beacon.setDefaultSynchronisation(true).
+</p>

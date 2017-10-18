@@ -1,0 +1,19 @@
+.es-beacon {
+   position: absolute;
+
+   border-radius: 50%;
+
+   animation-name: beacon;
+   animation-timing-function: ease-out;
+   animation-iteration-count: infinite;
+
+}
+
+@keyframes beacon {
+   0%, 60% {
+      box-shadow: 0 0 0 0;
+   }
+   100% {
+      box-shadow: 0 0 3em 1em;
+   }
+}

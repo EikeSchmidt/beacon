@@ -1,27 +1,38 @@
 # Beacon
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.7.
+Angular component to direct userfocus with little blinking highlights.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Installation
+**npm install --save esbeacon**
 
-## Code scaffolding
+Then import the module in your AppModule or any other module or export it in you SharedModule:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+`
+import { EsBeaconModule } from "esbeacon";
 
-## Build
+@NgModule({
+   imports: [
+      EsBeaconModule   
+   ]
+})
+export class AppModule {}
+`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+If you want to use the EsBeaconService to set app-wide default values, you have to import EsBeaconModule into your AppModule or SharedModule.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Test-coverage
 
-## Running end-to-end tests
+All tests were done by Jasmine and Protractor.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+esBeacon-Component: 100%
+esBeaconContainer-Directive: 100%
+EsBeaconService: 100%
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Contributors
+
+This module was made by Eike Christoph Schmidt to learn the handling of github.
+
+It was made with Angular CLI.

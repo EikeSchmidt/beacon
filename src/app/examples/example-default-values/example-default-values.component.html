@@ -1,0 +1,219 @@
+<h1>Default-values</h1>
+
+<div esBeaconContainer class="example-box">
+   <es-beacon></es-beacon>
+
+   <dl>
+      <dt>Color</dt>
+      <dd>
+         <dl>
+            <dt>Hue</dt>
+            <dd>
+               <input type="range" min="0" max="360" [(ngModel)]="hue"
+                      (change)="beacon.setDefaultColor('hsla('+hue+','+saturation+'%,'+luminosity+'%,'+opacity/100+')')">
+            </dd>
+            <dt>Saturation</dt>
+            <dd>
+               <input type="range" min="0" max="100" [(ngModel)]="saturation"
+                      (change)="beacon.setDefaultColor('hsla('+hue+','+saturation+'%,'+luminosity+'%,'+opacity/100+')')">
+            </dd>
+            <dt>Luminosity</dt>
+            <dd>
+               <input type="range" min="0" max="100" [(ngModel)]="luminosity"
+                      (change)="beacon.setDefaultColor('hsla('+hue+','+saturation+'%,'+luminosity+'%,'+opacity/100+')')">
+            </dd>
+            <dt>Opacity</dt>
+            <dd>
+               <input type="range" min="0" max="100" [(ngModel)]="opacity"
+                      (change)="beacon.setDefaultColor('hsla('+hue+','+saturation+'%,'+luminosity+'%,'+opacity/100+')')">
+            </dd>
+         </dl>
+      </dd>
+
+
+      <dt>Size</dt>
+      <dd>
+         <b>width</b> <input type="range" min="0" max="100" [(ngModel)]="width"
+                             (change)="beacon.setDefaultWidth(width + 'px')">
+         <b>{{ width }}px</b><br>
+
+         <b>size</b> <input type="range" min="0" max="100" [(ngModel)]="size"
+                            (change)="beacon.setDefaultSize(size + 'px')">
+         <b>{{ size }}px</b><br>
+      </dd>
+
+
+      <dt>Frequency</dt>
+      <dd>
+         <input type="range" min="0" max="5000" [(ngModel)]="frequency"
+                (change)="beacon.setDefaultFrequency(frequency + 'ms')">
+         <b>{{ frequency }}ms</b><br>
+      </dd>
+
+
+      <dt>Position</dt>
+      <dd>
+         <dl>
+            <dt>Top</dt>
+            <dd><input type="range" min="-10" max="110" [(ngModel)]="top"
+                       (change)="beacon.setDefaultTop(top + '%')">
+            </dd>
+
+            <dt>Bottom</dt>
+            <dd><input type="range" min="-10" max="110" [(ngModel)]="bottom"
+                       (change)="beacon.setDefaultBottom(bottom + '%')">
+            </dd>
+
+            <dt>Left</dt>
+            <dd><input type="range" min="-10" max="110" [(ngModel)]="left"
+                       (change)="beacon.setDefaultLeft(left + '%')">
+            </dd>
+
+            <dt>Right</dt>
+            <dd><input type="range" min="-10" max="110" [(ngModel)]="right"
+                       (change)="beacon.setDefaultRight(right + '%')">
+            </dd>
+         </dl>
+      </dd>
+
+   </dl>
+
+</div>
+
+<pre class="example-code">
+   <!-- ToDo: Add import statement of finished module -->
+<![CDATA[
+@Component({
+   ...
+})
+export class ...Component {
+
+   // some init-values
+
+   constructor(
+      public beacon: EsBeaconService
+   ) { }
+
+}
+]]>
+</pre>
+
+<pre class="example-code">
+<![CDATA[
+<div esBeaconContainer>
+   <es-beacon></es-beacon>
+
+   <dl>
+      <dt>Color</dt>
+      <dd>
+         <dl>
+            <dt>Hue</dt>
+            <dd>
+               <input type="range" min="0" max="360" [(ngModel)]="hue"
+                      (change)="beacon.setDefaultColor('hsla('+hue+','+saturation+'%,'+luminosity+'%,'+opacity/100+')')">
+            </dd>
+            <dt>Saturation</dt>
+            <dd>
+               <input type="range" min="0" max="100" [(ngModel)]="saturation"
+                      (change)="beacon.setDefaultColor('hsla('+hue+','+saturation+'%,'+luminosity+'%,'+opacity/100+')')">
+            </dd>
+            <dt>Luminosity</dt>
+            <dd>
+               <input type="range" min="0" max="100" [(ngModel)]="luminosity"
+                      (change)="beacon.setDefaultColor('hsla('+hue+','+saturation+'%,'+luminosity+'%,'+opacity/100+')')">
+            </dd>
+            <dt>Opacity</dt>
+            <dd>
+               <input type="range" min="0" max="100" [(ngModel)]="opacity"
+                      (change)="beacon.setDefaultColor('hsla('+hue+','+saturation+'%,'+luminosity+'%,'+opacity/100+')')">
+            </dd>
+         </dl>
+      </dd>
+
+
+      <dt>Size</dt>
+      <dd>
+         <b>width</b> <input type="range" min="0" max="100" [(ngModel)]="width"
+                             (change)="beacon.setDefaultWidth(width + 'px')">
+         <b>{{ width }}px</b><br>
+
+         <b>size</b> <input type="range" min="0" max="100" [(ngModel)]="size"
+                            (change)="beacon.setDefaultSize(size + 'px')">
+         <b>{{ size }}px</b><br>
+      </dd>
+
+
+      <dt>Frequency</dt>
+      <dd>
+         <input type="range" min="0" max="5000" [(ngModel)]="frequency"
+                (change)="beacon.setDefaultFrequency(frequency + 'ms')">
+         <b>{{ frequency }}ms</b><br>
+      </dd>
+
+
+      <dt>Position</dt>
+      <dd>
+         <dl>
+            <dt>Top</dt>
+            <dd><input type="range" min="-10" max="110" [(ngModel)]="top"
+                       (change)="beacon.setDefaultTop(top + '%')">
+            </dd>
+
+            <dt>Bottom</dt>
+            <dd><input type="range" min="-10" max="110" [(ngModel)]="bottom"
+                       (change)="beacon.setDefaultBottom(bottom + '%')">
+            </dd>
+
+            <dt>Left</dt>
+            <dd><input type="range" min="-10" max="110" [(ngModel)]="left"
+                       (change)="beacon.setDefaultLeft(left + '%')">
+            </dd>
+
+            <dt>Right</dt>
+            <dd><input type="range" min="-10" max="110" [(ngModel)]="right"
+                       (change)="beacon.setDefaultRight(right + '%')">
+            </dd>
+         </dl>
+      </dd>
+
+   </dl>
+
+</div>
+]]>
+</pre>
+
+
+<p>
+   Set the default values in the EsBeaconService. All parameters are the same as they are for the attributes on the es-beacon-element.
+</p>
+
+Here is a list of all setter-functions and their default values.
+<ul>
+   <li>
+      beacon.setDefaultColor("hsl(235, 70%, 50%)")
+   </li>
+   <li>
+      beacon.setDefaultWidth("10px")
+   </li>
+   <li>
+      beacon.setDefaultSize("12px")
+   </li>
+   <li>
+      beacon.setDefaultFrequency("2000ms")
+   </li>
+   <li>
+      beacon.setDefaultSynchronisation(false)
+   </li>
+   <li>
+      beacon.setDefaultTop("-12px")
+   </li>
+   <li>
+      beacon.setDefaultBottom("")
+   </li>
+   <li>
+      beacon.setDefaultLeft("-12px")
+   </li>
+   <li>
+      beacon.setDefaultRight("")
+   </li>
+</ul>

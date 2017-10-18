@@ -1,0 +1,33 @@
+<h1>Size</h1>
+
+<div esBeaconContainer class="example-box">
+   <es-beacon [width]="width + 'px'" [size]="size + 'px'"></es-beacon>
+   <br>
+   <br>
+   <b>width</b> <input type="range" min="0" max="100" [(ngModel)]="width"> <b>{{ width }}px</b><br>
+   <b>size</b> <input type="range" min="0" max="100" [(ngModel)]="size"> <b>{{ size }}px</b>
+</div>
+
+
+<pre class="example-code">
+<![CDATA[
+<div esBeaconContainer>
+   <es-beacon [width]="width + 'px'" [size]="size + 'px'"></es-beacon>
+
+
+   <input type="range" min="0" max="100" [(ngModel)]="width">
+   <input type="range" min="0" max="100" [(ngModel)]="size">
+</div>
+]]>
+</pre>
+
+
+<p>
+   Set the diameter of the blinking beacon with the size-attribute to any
+   <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length" target="_blank">css-length-value</a>.
+</p>
+
+<p>
+   Set the diameter of the inner circle with the width-attribute to any
+   <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length" target="_blank">css-length-value</a>.
+</p>

@@ -1,0 +1,73 @@
+<h1>Use-cases</h1>
+
+<div class="example-box">
+   <input type="text" [(ngModel)]="text" placeholder="type...">
+
+   <span esBeaconContainer *ngIf="!text" style="color: red; margin-left: 0.8em;">
+
+      <es-beacon *ngIf="!text" color="red" left="-0.8em" top="-0.25em"></es-beacon>
+      required
+
+   </span>
+</div>
+
+
+<pre class="example-code">
+<![CDATA[
+<div>
+   <input type="text" [(ngModel)]="text" placeholder="type...">
+
+   <span esBeaconContainer *ngIf="!text" style="color: red; margin-left: 0.8em;">
+
+      <es-beacon *ngIf="!text" color="red" left="-0.8em" top="-0.25em"></es-beacon>
+      required
+
+   </span>
+
+</div>
+]]>
+</pre>
+
+
+<div class="example-box">
+   <div esBeaconContainer style="padding-top: 1em; text-align: center;">
+
+
+      <es-beacon left="5%" synchronisation="0" frequency="1s" size="8px" width="8px"></es-beacon>
+      <es-beacon left="15%" synchronisation="1" frequency="1s" size="8px" width="8px"></es-beacon>
+      <es-beacon left="25%" synchronisation="2" frequency="1s" size="8px" width="8px"></es-beacon>
+      <es-beacon left="35%" synchronisation="3" frequency="1s" size="8px" width="8px"></es-beacon>
+      <es-beacon left="45%" synchronisation="4" frequency="1s" size="8px" width="8px"></es-beacon>
+      <es-beacon left="55%" synchronisation="5" frequency="1s" size="8px" width="8px"></es-beacon>
+      <es-beacon left="65%" synchronisation="6" frequency="1s" size="8px" width="8px"></es-beacon>
+      <es-beacon left="75%" synchronisation="7" frequency="1s" size="8px" width="8px"></es-beacon>
+      <es-beacon left="85%" synchronisation="8" frequency="1s" size="8px" width="8px"></es-beacon>
+      <es-beacon left="95%" synchronisation="9" frequency="1s" size="8px" width="8px"></es-beacon>
+
+
+      <h3>loading...</h3>
+   </div>
+</div>
+
+
+<pre class="example-code">
+<![CDATA[
+   <div esBeaconContainer style="padding-top: 1em; text-align: center;">
+
+
+      <es-beacon left="5%" synchronisation="0" frequency="1s" size="8px" width="8px"></es-beacon>
+      <es-beacon left="15%" synchronisation="1" frequency="1s" size="8px" width="8px"></es-beacon>
+      <es-beacon left="25%" synchronisation="2" frequency="1s" size="8px" width="8px"></es-beacon>
+      <es-beacon left="35%" synchronisation="3" frequency="1s" size="8px" width="8px"></es-beacon>
+      <es-beacon left="45%" synchronisation="4" frequency="1s" size="8px" width="8px"></es-beacon>
+      <es-beacon left="55%" synchronisation="5" frequency="1s" size="8px" width="8px"></es-beacon>
+      <es-beacon left="65%" synchronisation="6" frequency="1s" size="8px" width="8px"></es-beacon>
+      <es-beacon left="75%" synchronisation="7" frequency="1s" size="8px" width="8px"></es-beacon>
+      <es-beacon left="85%" synchronisation="8" frequency="1s" size="8px" width="8px"></es-beacon>
+      <es-beacon left="95%" synchronisation="9" frequency="1s" size="8px" width="8px"></es-beacon>
+
+
+      <h3>loading...</h3>
+   </div>
+]]>
+</pre>

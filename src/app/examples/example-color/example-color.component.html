@@ -1,0 +1,38 @@
+<h1>Color</h1>
+
+<div esBeaconContainer class="example-box">
+   <es-beacon [color]="color"></es-beacon>
+
+
+   <button (click)="color = false">default</button>
+   <br>
+   <button (click)="color = 'green'">green</button>
+   <br>
+   <button (click)="color = '#FF0000'">#FF0000</button>
+   <br>
+   <button (click)="color = 'rgba(255, 0, 225, 0.5)'">rgba(255, 0, 225, 0.5)</button>
+   <br>
+   <button (click)="color = 'hsla(310, 100%, 20%, 0.75)'">hsla(310, 100%, 20%, 0.75)</button>
+</div>
+
+
+<pre class="example-code">
+<![CDATA[
+<div esBeaconContainer>
+   <es-beacon [color]="color"></es-beacon>
+
+
+   <button (click)="color = false">default</button>
+   <button (click)="color = '#FF0000'">#FF0000</button>
+   <button (click)="color = 'green'">green</button>
+   <button (click)="color = 'rgba(255, 0, 225, 0.5)'">rgba(255, 0, 225, 0.5)</button>
+   <button (click)="color = 'hsla(310, 100%, 20%, 0.75)'">hsla(310, 100%, 20%, 0.75)</button>
+</div>
+]]>
+</pre>
+
+
+<p>
+   Set the color-attribute to any
+   <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value" target="_blank">css-color-value</a>.
+</p>

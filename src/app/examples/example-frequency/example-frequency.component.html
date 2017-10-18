@@ -1,0 +1,25 @@
+<h1>Frequency</h1>
+
+<div esBeaconContainer class="example-box">
+   <es-beacon [frequency]="frequency + 'ms'"></es-beacon>
+
+   <input type="range" min="1" max="5000" [(ngModel)]="frequency"> <b>{{ frequency }}ms</b>
+</div>
+
+
+<pre class="example-code">
+<![CDATA[
+<div esBeaconContainer>
+   <es-beacon [frequency]="frequency + 'ms'"></es-beacon>
+
+
+   <input type="range" min="1" max="5000" [(ngModel)]="frequency">
+</div>
+]]>
+</pre>
+
+
+<p>
+   Set the frequency-attribute to any
+   <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/time" target="_blank">css-time-value</a>.
+</p>

@@ -1,0 +1,70 @@
+<h1>Beacon-container</h1>
+
+<div esBeaconContainer class="example-box">
+
+   <div [esBeaconContainer]="outerBox" class="example-box">
+
+      <div [esBeaconContainer]="innerBox" class="example-box">
+
+         <es-beacon></es-beacon>
+
+         <label>
+            <input type="checkbox" [(ngModel)]="innerBox">
+            Inner box
+         </label><br>
+         <label>
+            <input type="checkbox" [(ngModel)]="outerBox">
+            Outer box
+         </label>
+      </div>
+
+   </div>
+</div>
+
+
+<pre class="example-code">
+<![CDATA[
+<div esBeaconContainer>
+   <div [esBeaconContainer]="outerBox">
+
+      <div [esBeaconContainer]="innerBox">
+
+         <es-beacon></es-beacon>
+
+         <input type="checkbox" [(ngModel)]="innerBox">
+         <input type="checkbox" [(ngModel)]="outerBox">
+
+      </div>
+
+   </div>
+</div>
+]]>
+</pre>
+
+
+<p>
+   The beacons position will be relative to the next parent element with a css position of "relative", "absolute" or
+   "fixed".
+</p>
+
+<p>
+   For better readability, you can use the esBeaconContainer-directive which applies the
+   "relative"-position-attribute.<br>
+   You can also give parameters to the attribute to change the attribute.
+</p>
+
+<ul>
+   <li>
+      esBeaconContainer="absolute" will apply positon:absolute
+   </li>
+   <li>
+      esBeaconContainer="fixed" will apply positon:fixed
+   </li>
+   <li>
+      [esBeaconContainer]="false", [esBeaconContainer]="null" and esBeaconContainer="static" will apply positon:static,
+      hence disable this element as a beacon-container.
+   </li>
+   <li>
+      everything else will apply position:relative
+   </li>
+</ul>

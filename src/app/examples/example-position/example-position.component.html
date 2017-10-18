@@ -1,0 +1,35 @@
+<h1>Position</h1>
+
+<div esBeaconContainer class="example-box">
+   <es-beacon [left]="distance + '%'"></es-beacon>
+   <es-beacon [top]="distance + '%'" right="0"></es-beacon>
+   <es-beacon [right]="distance + '%'" bottom="10px"></es-beacon>
+   <es-beacon [bottom]="distance + '%'"></es-beacon>
+
+
+
+   <input type="range" min="-10" max="110" [(ngModel)]="distance"> <b>{{ distance }}%</b>
+</div>
+
+
+<pre class="example-code">
+<![CDATA[
+<div esBeaconContainer>
+   <es-beacon [left]="distance + '%'"></es-beacon>
+   <es-beacon [top]="distance + '%'" right="0"></es-beacon>
+   <es-beacon [right]="distance + '%'" bottom="0"></es-beacon>
+   <es-beacon [bottom]="distance + '%'"></es-beacon>
+
+
+
+   <input type="range" min="-10" max="110" [(ngModel)]="distance">
+</div>
+]]>
+</pre>
+
+
+<p>
+   Set the top, bottom, left or right-attribute to any
+   <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length" target="_blank">css-length-value</a>.<br>
+   If you set both top and bottom, then top is chosen over bottom. Same is true for left over right.
+</p>
