@@ -2,6 +2,10 @@
 
 Angular component to direct userfocus with little blinking highlights.
 
+# Examples
+
+https://eikeschmidt.github.io/beacon/
+
 
 # Installation
 > **npm install --save esbeacon**
